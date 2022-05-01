@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: "Poor Story", cursive;
+}
+
+body,
+html {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body img {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+main .mainTitle {
+  width: 20%;
+  margin: 0 auto;
+  color: #111;
+  position: relative;
+  font-size: 5rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+main .mainTitle img {
+  width: 30rem;
+  height: 15.4rem;
+  position: absolute;
+  top: -15%;
+  left: -28%;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+main .sectionBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+main .sectionBox section, main .sectionBox .resultMatrix {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50.5rem;
+  height: 80rem;
+  text-align: center;
+  color: #111;
+}
+
+main .sectionBox section img, main .sectionBox .resultMatrix img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9;
+}
+
+main .sectionBox section .headerBox, main .sectionBox .resultMatrix .headerBox {
+  margin-top: 5rem;
+  width: 100%;
+}
+
+main .sectionBox section .headerBox .matrixHeader, main .sectionBox .resultMatrix .headerBox .matrixHeader {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-size: 4rem;
+}
+
+main .sectionBox section .headerBox .outputOptionBox, main .sectionBox .resultMatrix .headerBox .outputOptionBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5rem;
+}
+
+main .sectionBox section .headerBox .outputOptionBox label, main .sectionBox .resultMatrix .headerBox .outputOptionBox label {
+  font-size: 3rem;
+}
+
+main .sectionBox section .headerBox .outputOptionBox label [class*='matrixOutput'], main .sectionBox .resultMatrix .headerBox .outputOptionBox label [class*='matrixOutput'] {
+  background-color: transparent;
+  text-align: center;
+  font-size: 3rem;
+  outline: 0;
+  border: 0;
+  width: 5rem;
+  height: 3rem;
+}
+
+main .sectionBox section .headerBox [class*='buttonBox'], main .sectionBox .resultMatrix .headerBox [class*='buttonBox'] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 6rem;
+  margin-top: 1rem;
+}
+
+main .sectionBox section .headerBox [class*='buttonBox'] button, main .sectionBox .resultMatrix .headerBox [class*='buttonBox'] button {
+  display: inline-block;
+  position: relative;
+  border: 0;
+  background-color: transparent;
+  color: #111;
+  height: 100%;
+}
+
+main .sectionBox section .headerBox [class*='buttonBox'] button span, main .sectionBox .resultMatrix .headerBox [class*='buttonBox'] button span {
+  font-size: 3rem;
+  display: inline-block;
+  position: relative;
+}
+
+main .sectionBox section .headerBox [class*='buttonBox'] button span::after, main .sectionBox .resultMatrix .headerBox [class*='buttonBox'] button span::after {
+  content: '';
+  width: 0;
+  height: 3rem;
+  display: inline-block;
+  background-color: rgba(255, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: -0.5rem;
+  z-index: -1;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+main .sectionBox section .headerBox [class*='buttonBox'] button [class*='resetBtn']::after, main .sectionBox .resultMatrix .headerBox [class*='buttonBox'] button [class*='resetBtn']::after {
+  background-color: rgba(0, 217, 255, 0.3);
+}
+
+main .sectionBox section .headerBox [class*='buttonBox'] button [class*='outputBtn'].active, main .sectionBox .resultMatrix .headerBox [class*='buttonBox'] button [class*='outputBtn'].active,
+main .sectionBox section .headerBox [class*='buttonBox'] button [class*='outputRandomBtn'].active,
+main .sectionBox .resultMatrix .headerBox [class*='buttonBox'] button [class*='outputRandomBtn'].active {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+main .sectionBox section .headerBox [class*='buttonBox'] button:hover, main .sectionBox .resultMatrix .headerBox [class*='buttonBox'] button:hover {
+  cursor: pointer;
+}
+
+main .sectionBox section .headerBox [class*='buttonBox'] button:hover::after, main .sectionBox .resultMatrix .headerBox [class*='buttonBox'] button:hover::after,
+main .sectionBox section .headerBox [class*='buttonBox'] button:hover span::after,
+main .sectionBox .resultMatrix .headerBox [class*='buttonBox'] button:hover span::after {
+  width: 100%;
+}
+
+main .sectionBox section .headerBox [class*='buttonBox'] button::after, main .sectionBox .resultMatrix .headerBox [class*='buttonBox'] button::after {
+  content: '';
+  width: 0;
+  height: 3rem;
+  display: inline-block;
+  background-color: rgba(255, 0, 0, 0.3);
+  position: absolute;
+  bottom: 0;
+  left: 0.5rem;
+  z-index: -1;
+  -webkit-transition: width 0.2s 0.2s;
+  transition: width 0.2s 0.2s;
+}
+
+main .sectionBox section .headerBox [class*='buttonBox'] button:last-child::after, main .sectionBox .resultMatrix .headerBox [class*='buttonBox'] button:last-child::after {
+  background-color: rgba(0, 217, 255, 0.3);
+}
+
+main .sectionBox section .outputAreaBox, main .sectionBox .resultMatrix .outputAreaBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60%;
+  font-size: 3rem;
+}
+
+main .sectionBox section .outputAreaBox [class*='outputDes'], main .sectionBox .resultMatrix .outputAreaBox [class*='outputDes'] {
+  font-size: 3rem;
+}
+
+main .sectionBox section .outputAreaBox [class*='outputArea'], main .sectionBox .resultMatrix .outputAreaBox [class*='outputArea'] {
+  margin: 0 auto;
+}
+
+main .sectionBox section .outputAreaBox [class*='outputArea'] .valueArea, main .sectionBox .resultMatrix .outputAreaBox [class*='outputArea'] .valueArea {
+  width: 6rem;
+  height: 6rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.2rem;
+  border: 0.1rem solid #111;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+main .sectionBox .resultMatrix .headerBox .outputOptionBox {
+  height: 8.6rem;
+}
+
+main .sectionBox .resultMatrix .headerBox .outputOptionBox .calculateBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .sectionBox .resultMatrix .headerBox .outputOptionBox .calculateBox button {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  border: 0;
+  background-color: transparent;
+  color: #111;
+  height: 100%;
+}
+
+main .sectionBox .resultMatrix .headerBox .outputOptionBox .calculateBox button span {
+  width: 100%;
+  font-size: 3rem;
+  display: inline-block;
+  position: relative;
+}
+
+main .sectionBox .resultMatrix .headerBox .outputOptionBox .calculateBox button span::after {
+  content: '';
+  width: 0;
+  height: 3rem;
+  display: inline-block;
+  background-color: rgba(171, 242, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: -0.5rem;
+  z-index: -1;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+main .sectionBox .resultMatrix .headerBox .outputOptionBox .calculateBox button .resetBtnC::after {
+  background-color: rgba(0, 217, 255, 0.3);
+}
+
+main .sectionBox .resultMatrix .headerBox .outputOptionBox .calculateBox button .plusBtn.active,
+main .sectionBox .resultMatrix .headerBox .outputOptionBox .calculateBox button .minusBtn.active,
+main .sectionBox .resultMatrix .headerBox .outputOptionBox .calculateBox button .multiplyBtn.active {
+  background-color: rgba(171, 242, 0, 0.3);
+}
+
+main .sectionBox .resultMatrix .headerBox .outputOptionBox .calculateBox button:hover {
+  cursor: pointer;
+}
+
+main .sectionBox .resultMatrix .headerBox .outputOptionBox .calculateBox button:hover::after,
+main .sectionBox .resultMatrix .headerBox .outputOptionBox .calculateBox button:hover span::after {
+  width: 100%;
+}
+
+main .sectionBox .resultMatrix .headerBox .outputOptionBox .calculateBox button::after {
+  content: '';
+  width: 0;
+  height: 3rem;
+  display: inline-block;
+  background-color: rgba(171, 242, 0, 0.3);
+  position: absolute;
+  bottom: 0;
+  left: 0.5rem;
+  z-index: -1;
+  -webkit-transition: width 0.2s 0.2s;
+  transition: width 0.2s 0.2s;
+}
+
+main .sectionBox .resultMatrix .headerBox .outputOptionBox .calculateBox button:last-child::after {
+  background-color: rgba(0, 217, 255, 0.3);
+}
+
+main .sectionBox .resultMatrix .headerBox .resetBtnC {
+  width: 6rem;
+  height: 4rem;
+  font-size: 2rem;
+}
+
+.modalUp {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modalUp .modalBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.modalUp .modalBox .modalAlert {
+  width: 70%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  margin-top: 2rem;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.modalUp .modalBox .closeBtn {
+  position: absolute;
+  top: 3.7rem;
+  right: 3.7rem;
+  border: 0;
+  background-color: transparent;
+  color: #fff;
+  width: 5rem;
+  height: 5rem;
+  line-height: 4.8rem;
+  font-size: 3.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1rem;
+}
+
+.modalUp .modalBox .closeBtn:hover {
+  cursor: pointer;
+  color: rgba(255, 0, 0, 0.3);
+}
+/*# sourceMappingURL=index.css.map */

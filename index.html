@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Google Web Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet" />
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./images/favicon/apple-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./images/favicon/apple-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./images/favicon/apple-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./images/favicon/apple-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./images/favicon/apple-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./images/favicon/apple-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./images/favicon/apple-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/android-icon-192x192.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png" />
+		<link rel="manifest" href="./images/favicon/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#ffffff" />
+		<title>Matrix Calculator</title>
+		<link rel="stylesheet" href="./css/index.css" />
+	</head>
+	<body>
+		<img src="./images/bg.jpg" alt="bg" />
+		<main>
+			<h1 class="mainTitle">Matrix Calculator<img src="./images/pen.png" alt="" /></h1>
+			<div class="sectionBox">
+				<!-- MatrixA -->
+				<section class="MatrixA">
+					<img src="./images/board.png" alt="board" />
+					<div class="headerBox">
+						<h2 class="matrixHeader">A</h2>
+						<div class="outputOptionBox">
+							<label>Row&nbsp;&nbsp;(<input class="matrixOutputA" type="text" maxlength="1" />)</label><label>Column&nbsp;&nbsp;(<input class="matrixOutputA" type="text" maxlength="1" />)</label>
+						</div>
+						<div class="buttonBoxA">
+							<button><span class="outputBtnA" id="outputBtnA">Output </span></button><button><span class="outputRandomBtnA" id="outputRandomBtnA">Random</span></button
+							><button><span class="resetBtnA" id="resetBtnA">Reset</span></button>
+						</div>
+					</div>
+					<div class="outputAreaBox">
+						<div class="outputDesA">행렬을 생성 해주세요.</div>
+						<div class="outputAreaA"></div>
+					</div>
+				</section>
+				<!-- matrix B -->
+				<section class="MatrixB">
+					<img src="./images/board.png" alt="board" />
+					<div class="headerBox">
+						<h2 class="matrixHeader">B</h2>
+						<div class="outputOptionBox">
+							<label>Row&nbsp;&nbsp;(<input class="matrixOutputB" type="text" maxlength="1" />)</label><label>Column&nbsp;&nbsp;(<input class="matrixOutputB" type="text" maxlength="1" />)</label>
+						</div>
+						<div class="buttonBoxB">
+							<button><span class="outputBtnB" id="outputBtnB">Output</span></button><button><span class="outputRandomBtnB" id="outputRandomBtnB">Random</span></button
+							><button><span class="resetBtnB" id="resetBtnB">Reset</span></button>
+						</div>
+					</div>
+					<div class="outputAreaBox">
+						<div class="outputDesB">행렬을 생성 해주세요.</div>
+						<div class="outputAreaB"></div>
+					</div>
+				</section>
+				<!-- resultMatrix -->
+				<section class="resultMatrix">
+					<img src="./images/board.png" alt="board" />
+					<div class="headerBox">
+						<h2 class="matrixHeader">Result</h2>
+						<div class="outputOptionBox">
+							<div class="calculateBox">
+								<button><span class="plusBtn" id="plusBtn">+</span></button><button><span class="minusBtn" id="minusBtn">-</span></button
+								><button><span class="multiplyBtn" id="multiplyBtn">*</span></button><button><span class="resetBtnC" id="resetBtnC">Reset</span></button>
+							</div>
+						</div>
+					</div>
+					<div class="outputAreaBox">
+						<div class="outputDesC">A와 B행렬을 생성 후,<br />연산버튼을 눌러주세요.</div>
+						<div class="outputAreaC"></div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<!-- modal -->
+		<div class="modalUp">
+			<div class="modalBox">
+				<img src="./images/alert.png" alt="alert" />
+				<div class="modalAlert"></div>
+				<button class="closeBtn" id="closeBtn">X</button>
+			</div>
+		</div>
+		<script src="./js/index.js"></script>
+	</body>
+</html>

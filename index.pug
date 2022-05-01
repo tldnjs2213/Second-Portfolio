@@ -1,0 +1,113 @@
+doctype html
+html(lang="ko")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    // Google Web Font 
+    . 
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+
+    // Favicon 
+    . 
+      <link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="./images/favicon/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="./images/favicon/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="./images/favicon/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="./images/favicon/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="./images/favicon/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="./images/favicon/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="./images/favicon/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="./images/favicon/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+      <link rel="manifest" href="./images/favicon/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+    
+    title Matrix Calculator
+    link(rel="stylesheet", href="./css/index.css")
+  body 
+    img(src="./images/bg.jpg", alt="bg")
+    main 
+      h1.mainTitle Matrix Calculator
+        img(src="./images/pen.png", alt=pen")
+      .sectionBox 
+        // MatrixA 
+        section.MatrixA 
+          img(src="./images/board.png", alt="board")
+          .headerBox 
+            h2.matrixHeader A
+            .outputOptionBox
+              label Row&nbsp;&nbsp;(
+                input(type="text", maxlength="1").matrixOutputA
+                |)
+              label Column&nbsp;&nbsp;(
+                input(type="text", maxlength="1").matrixOutputA
+                |)
+            .buttonBoxA
+              button 
+                span.outputBtnA#outputBtnA Output 
+              button 
+                span.outputRandomBtnA#outputRandomBtnA Random
+              button 
+                span.resetBtnA#resetBtnA Reset
+          .outputAreaBox 
+            .outputDesA 행렬을 생성 해주세요.
+            .outputAreaA 
+        // matrix B 
+        section.MatrixB 
+          img(src="./images/board.png", alt="board")
+          .headerBox 
+            h2.matrixHeader B
+            .outputOptionBox
+              label Row&nbsp;&nbsp;(
+                input(type="text", maxlength="1").matrixOutputB 
+                |)
+              label Column&nbsp;&nbsp;(
+                input(type="text", maxlength="1").matrixOutputB
+                |)
+            .buttonBoxB
+              button 
+                span.outputBtnB#outputBtnB Output
+              button 
+                span.outputRandomBtnB#outputRandomBtnB Random
+              button 
+                span.resetBtnB#resetBtnB Reset
+          .outputAreaBox
+            .outputDesB 행렬을 생성 해주세요.
+            .outputAreaB 
+        // resultMatrix 
+        section.resultMatrix 
+          img(src="./images/board.png", alt="board")
+          .headerBox 
+            h2.matrixHeader Result
+            .outputOptionBox
+              .calculateBox 
+                button 
+                  span.plusBtn#plusBtn +
+                button 
+                  span.minusBtn#minusBtn -
+                button 
+                  span.multiplyBtn#multiplyBtn *
+                button 
+                  span.resetBtnC#resetBtnC Reset
+          .outputAreaBox 
+            .outputDesC A와 B행렬을 생성 후,
+              br
+              | 연산버튼을 눌러주세요.
+            .outputAreaC 
+    // modal 
+    .modalUp 
+      .modalBox 
+        img(src="./images/alert.png", alt="alert")
+        .modalAlert 
+        button#closeBtn.closeBtn X
+
+    script(src="./js/index.js")
